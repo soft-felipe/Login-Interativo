@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Righteous&display=swap');
+
+/*
+* Lipando as formatações predefinidas
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(68.15deg, #7ff0ca77 16.62%, #7ff0ca77 85.61%);
+}
+
+/*
+* Organizando todos os elementos da página dentro de elemento pai
+*/
+.container {
+    display: flex; /* Flexbox: documentação utilizada https://www.devmedia.com.br/css3-flexbox-funcionamento-e-propriedades/29532 */
+    justify-content: center; 
+    align-items: center; /* Alinhamento dos elementos */
+    height: 100vh;
+}
+
+/*
+* Estilizando o container que fica em destaque, a parte de login e cadastro em si
+*/
+.conteudo {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+}
+
+/*
+* Criando a coluna verde que se movimenta
+*/
+.conteudo::before {
+    content: "";
+    position: absolute;
+    background-color: #58af9b;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    left: 0; /* Nesse momento ele vale 0, mas será movimentada pelo javascript */
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize; /* Começo das palavras com letra maiúscula */
+}
+
+.titulo-bemvindo {
+    padding: 15px; /* Espaçamento interno do elemento, por dentro da caixa */
+    color: #fff;
+}
+
+.descricao {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+}
+.descricao-primaria {
+    color: #fff;
+}
+.descricao-secundaria {
+    color: #7f8c8d;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase; /* Todo o texto em caixa alta */
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px; /* Espaçamento interno do elemento, por dentro da caixa, nesse caso com parâmetros: cima/baixo  direira/esquerda */
+    margin-top: 15px; /* Espaço por fora do elemento, em volta, por fora da caixa */
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+}
+
+.btn-entrar {
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 180px;
+    transition: background-color .5s;
+}
+
+.btn-entrar:hover {
+    background-color:#fff;
+    color: #58af9b;
+}
+
+.btn-inscrever {
+    width: 180px;
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+}
+
+.btn-inscrever:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+
+.primeiroConteudo {
+    display: flex;
+}
+
+.primeiroConteudo .segundaColuna {
+    z-index: 12; /* Eixo z: o que fica na frente e o que fica atrás */
+}
+
+.primeiraColuna {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    z-index: 10;
+}
+.segundaColuna {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-criar {
+    color: #58af9b;
+}
+
+.midias-sociais {
+    margin: 9px 0; /* Espaço por fora do elemento, em volta, por fora da caixa, nesse caso com parâmetros: cima/baixo  direira/esquerda */
+}
+
+.link-midias-sociais:not(:first-child) {
+    margin-left: 10px;
+}
+
+.link-midias-sociais .item-midias-sociais {
+    transition: background-color .5s;
+}
+
+.listaMidias-Sociais {
+    display: flex;
+    list-style-type: none;
+}
+
+.item-midias-sociais {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+}
+
+.listaMidias-Sociais .item-midias-sociais:hover{
+    background-color: #58af9b;
+    color: #fff;
+    border-color:#58af9b;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.formulario input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+.label-input {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    background-color: #ecf0f1;
+}
+
+.icone {
+    color:#7f8c8d;
+    padding: 0 7px; /* /* Espaçamento interno do elemento, por dentro da caixa, parâmetros: cima/baixo direira/esquerda */
+}
+
+/* INÍCIO SEGUNDO CONTÉUDO */
+
+.segundoConteudo {
+    position: absolute;
+    display: flex;
+}
+.segundoConteudo .primeiraColuna {
+    order: 2; /* Invertendo a ordem das colunas para a interação */
+    z-index: -1;
+}
+.segundoConteudo .segundaColuna {
+    order: 1;
+    z-index: -1;
+}
+
+.senha {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.senha::first-letter {
+    text-transform: capitalize;
+}
+
+/* TROCA DE CLASSES PARA INTERAÇÃO DA PÁGINA */
+
+.entrar-js .primeiroConteudo .primeiraColuna,
+.entrar-js .primeiroConteudo .segundaColuna {
+    z-index: -1;
+}
+
+.entrar-js .segundoConteudo .segundaColuna {
+    z-index: 11;
+}
+.entrar-js .segundoConteudo .primeiraColuna {
+    z-index: 13;
+}
+
+.entrar-js .conteudo::before {
+    left: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    animation: slidein 2s;
+    z-index: 12;
+}
+
+.inscrever-js .conteudo::before {
+    animation: slideout 2s;
+    z-index: 12;
+}
+
+.inscrever-js .segundoConteudo .primeiraColuna,
+.inscrever-js .segundoConteudo .segundaColuna {
+    z-index: -1;
+}
+
+.inscrever-js .primeiroConteudo .segundaColuna {
+    z-index: 11;
+}
+.inscrever-js .primeiroConteudo .primeiraColuna {
+    z-index: 13;
+}
+
+/* DESLOCANDO CONTÉUDO */
+
+.entrar-js .primeiroConteudo .segundaColuna {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 3s;
+}
+
+.inscrever-js .segundoConteudo .segundaColuna {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 3s;
+}
+
+/* ANIMAÇÃO PARA DESLOCAMENTO */
+
+@keyframes deslocamentoEsq {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -37px;
+        opacity: .5;
+    }
+
+    50% {
+        left: -73px;
+        opacity: .2;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: 37px;
+        opacity: .5;
+    }
+
+    50% {
+        left: 73px;
+        opacity: .2;
+    }
+
+    to {
+        left: 110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* ANIMAÇÃO CSS */
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }   
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }   
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}

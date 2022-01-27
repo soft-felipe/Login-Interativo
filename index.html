@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/ec1a23a39c.js" crossorigin="anonymous"></script> <!-- Font Awesome: importar logos -->
+</head>
+<body class="inscrever-js">
+    <div class="container">
+        <div class="conteudo primeiroConteudo">
+
+            <div class="primeiraColuna">
+                <h2 class="titulo titulo-bemvindo">Bem vindo de volta!</h2>
+                <p class="descricao descricao-primaria">Para se manter conectado conosco</p>
+                <p class="descricao descricao-primaria">por favor faça o login com suas informações pessoais</p>
+                <button id="entrar" class="btn btn-entrar">Entrar</button>
+            </div> <!-- fim primeiraColuna -->
+
+            <div class="segundaColuna">
+                <h2 class="titulo titulo-criar">Criar Conta</h2>
+                <div class="midias-sociais">
+                    <ul class="listaMidias-Sociais">
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- fim midias-socias -->
+                <p class="descricao descricao-secundaria">ou utilize seu email para registro:</p>
+                <form class="formulario">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icone"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icone"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icone"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    
+                    <button onclick="alert('A página ainda é apenas um projeto para estudo, essa função estará disponível em breve!')" class="btn btn-inscrever">Inscrever-se</button>
+                </form>
+            </div> <!-- fim segundaColuna -->
+        </div> <!-- fim primeiroConteudo -->
+
+        <div class="conteudo segundoConteudo">
+            <div class="primeiraColuna">
+                <h2 class="titulo titulo-bemvindo">Olá, amigo!</h2>
+                <p class="descricao descricao-primaria">Insira seus dados pessoais</p>
+                <p class="descricao descricao-primaria">e comece uma nova jornada conosco</p>
+                <button id="inscrever" class="btn btn-entrar">Inscrever-se</button>
+            </div><!-- fim primeiraColuna -->
+            
+            <div class="segundaColuna">
+                <h2 class="titulo titulo-criar">Fazer Login</h2>
+                <div class="midias-sociais">
+                    <ul class="listaMidias-Sociais">
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+
+                        <a class="link-midias-sociais" href="#">
+                            <li class="item-midias-sociais">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- fim midias-socias -->
+                <p class="descricao descricao-secundaria">ou utilize sua conta de email:</p>
+                <form class="formulario">
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icone"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icone"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+
+                    <a class="senha" href="#">esqueceu sua senha?</a>
+                    <button onclick="alert('A página ainda é apenas um projeto para estudo, essa função estará disponível em breve!')" class="btn btn-inscrever">Entrar</button>
+                </form>
+            </div><!-- fim segundaColuna -->
+        </div><!-- fim segundoConteudo -->
+    </div> <!-- fim do container -->
+    <script src="js/app.js"></script>
+</body>
+</html>
